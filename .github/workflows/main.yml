@@ -1,9 +1,7 @@
 name: Build/release
 
 on:
-  push:
-    tags:
-      - fork-v*
+  push
 
 permissions:
   contents: write
@@ -14,7 +12,7 @@ jobs:
 
         strategy:
             matrix:
-                os: [macos-latest, ubuntu-latest, windows-latest]
+                os: [windows-latest]
 
         steps:
             - name: Check out Git repository
@@ -39,4 +37,10 @@ jobs:
               with:
                   github_token: ${{ secrets.github_token }}
                   package_manager: 'pnpm'
-                  release: ${{ startsWith(github.ref, 'refs/tags/fork-v') }}
+                  release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+            - name: Upload build artifact
+              uses: actions/upload-artifact@v
+              with:
+                  name: electron-build
+                  path: dist/
