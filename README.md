@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
 
 <picture>
       <img src="assets/icons/soundcloud.png" width="200" />
@@ -83,4 +83,4 @@ issue on this repository.
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 [repo_logo_img]: https://github.com/create-go-app/cli/assets/11155743/95024afc-5e3b-4d6f-8c9c-5daaa51d080d
-[repo_url]: https://github.com/richardhbtz/soundcloud-rpc
+[repo_url]: https://github.com/richardhbtz/soundcloud-rpc -->
